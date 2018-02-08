@@ -12,6 +12,7 @@
         "indent": 2,
         "prefer-const": 1,
         "react/jsx-curly-spacing": [ 2, "always" ],
-        "react/jsx-filename-extension": 0
+        "react/jsx-filename-extension": 0,
+        "semi": "off"
     }
 }
