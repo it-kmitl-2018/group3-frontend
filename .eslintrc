@@ -1,0 +1,17 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "mocha": true,
+        "jest": true
+    },
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+        "indent": 2,
+        "prefer-const": 1,
+        "react/jsx-curly-spacing": [ 2, "always" ],
+        "react/jsx-filename-extension": 0
+    }
+}
