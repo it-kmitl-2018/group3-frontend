@@ -6,7 +6,7 @@
         "mocha": true,
         "jest": true
     },
-    "extends": "airbnb",
+    "extends": ["airbnb", "eslint:recommended"],
     "parser": "babel-eslint",
     "rules": {
         "indent": 2,
