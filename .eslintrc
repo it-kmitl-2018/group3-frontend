@@ -6,12 +6,14 @@
         "mocha": true,
         "jest": true
     },
-    "extends": "airbnb",
+    "extends": ["airbnb", "eslint:recommended"],
     "parser": "babel-eslint",
     "rules": {
         "indent": 2,
         "prefer-const": 1,
         "react/jsx-curly-spacing": [ 2, "always" ],
-        "react/jsx-filename-extension": 0
+        "react/jsx-filename-extension": 0,
+        "semi": ["error", "never"],
+        "comma-dangle": ["error", "always-multiline"]
     }
 }
