@@ -1,19 +1,17 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from "react"
+import EtaxForm from "./components/EtaxForm/EtaxForm"
 
-const App = () =>
-  (
-    <div className="App">
-      <header className="App-header">
-        <img src={ logo } className="App-logo" alt="logo" />
-        <h1 className="App-title">E-TAX</h1>
-      </header>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
+const App = () => (
+  <div className="container">
+    <div className="py-5 text-center">
+      <h2>E-TAX Invoice XML Generator</h2>
+      <p className="lead">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam amet quos
+        eos id officia voluptatem quae eveniet! Natus, non a.
       </p>
+      <EtaxForm />
     </div>
-  )
-
+  </div>
+)
 
 export default App
