@@ -2,6 +2,11 @@ import React from "react"
 import TextField from "material-ui/TextField"
 import PropTypes from "prop-types"
 
+/**
+ * EqualLayoutForm is a general purpose
+ * group of inputs that equally spread layout.
+ * @PureComponent
+ */
 const EqualLayoutForm = props => (
   <div className="row col-12">
     {props.fields.map(field => (

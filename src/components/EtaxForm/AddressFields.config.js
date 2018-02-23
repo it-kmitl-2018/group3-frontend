@@ -1,5 +1,10 @@
 import _ from "lodash"
 
+/**
+ * A json config for Address fields
+ *
+ * @FormConfig
+ */
 const addressFields = [
   {
     id: "houseNo",
@@ -45,6 +50,10 @@ const addressFields = [
   },
 ]
 
+/**
+ * Generate object that has {id} as key and {""} as value
+ * Example. {houseNo: "", villege: "", ...}
+ */
 const addressFieldsState = _.zipObject(
   addressFields.map(field => field.id),
   _.map(addressFields, _.constant(""))
