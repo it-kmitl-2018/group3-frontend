@@ -1,12 +1,14 @@
 import React from "react"
 import EqualLayoutForm from "./components/EqualLayoutForm"
-import { addressFieldsState, addressFields } from "./AddressFields.config"
-
+import {
+  addressFieldsState,
+  addressFields,
+} from "./configs/AddressFields.config"
 
 /**
  * EtaxForm is a component that handle
  * all form input.
- * 
+ *
  * @class EtaxForm
  * @extends {React.Component}
  */
