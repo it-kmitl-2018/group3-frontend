@@ -2,22 +2,25 @@ import React from "react"
 import TextField from "material-ui/TextField"
 import PropTypes from "prop-types"
 
-const AddressForm = props => (
-  <div className="row">
+const EqualLayoutForm = props => (
+  <div className="row col-12">
     {props.fields.map(field => (
-      <TextField
-        key={ field.id }
-        id={ field.id }
-        label={ field.label }
-        helperText={ field.helperText }
-        margin={ field.margin }
-        required={ field.required }
-      />
+      <div className="col-4">
+        <TextField
+          className="col-12"
+          key={ field.id }
+          id={ field.id }
+          label={ field.label }
+          helperText={ field.helperText }
+          margin={ field.margin }
+          required={ field.required }
+        />
+      </div>
     ))}
   </div>
 )
 
-AddressForm.propTypes = {
+EqualLayoutForm.propTypes = {
   fields: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -29,7 +32,7 @@ AddressForm.propTypes = {
   ),
 }
 
-AddressForm.defaultProps = {
+EqualLayoutForm.defaultProps = {
   fields: [
     {
       id: "houseNo",
@@ -41,4 +44,4 @@ AddressForm.defaultProps = {
   ],
 }
 
-export default AddressForm
+export default EqualLayoutForm

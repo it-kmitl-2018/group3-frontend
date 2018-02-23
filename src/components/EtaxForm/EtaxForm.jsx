@@ -1,36 +1,16 @@
 import React from "react"
-import AddressForm from "./components/AddressForm"
+import EqualLayoutForm from "./components/EqualLayoutForm"
+import { addressFieldsState, addressFields } from "./AddressFields.config"
 
 class EtaxForm extends React.Component {
-  state = {}
+  constructor(props) {
+    super(props)
+    this.state = { ...addressFieldsState }
+  }
 
   render() {
-    return <AddressForm fields={ fields } />
+    return <EqualLayoutForm fields={ addressFields } />
   }
 }
-
-const fields = [
-  {
-    id: "houseNo",
-    label: "House No.",
-    helperText: "Your House Number",
-    margin: "normal",
-    required: true,
-  },
-  {
-    id: "villege",
-    label: "Villege",
-    helperText: "Your Villege Name",
-    margin: "normal",
-    required: false,
-  },
-  {
-    id: "postCode",
-    label: "Post Code",
-    helperText: "Your Post Code",
-    margin: "normal",
-    required: true,
-  },
-]
 
 export default EtaxForm
