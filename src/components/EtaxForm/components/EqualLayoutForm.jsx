@@ -14,6 +14,7 @@ const EqualLayoutForm = props => (
           helperText={ field.helperText }
           margin={ field.margin }
           required={ field.required }
+          onChange={ props.handleChange(field.id) }
         />
       </div>
     ))}
@@ -30,6 +31,7 @@ EqualLayoutForm.propTypes = {
       required: PropTypes.bool,
     })
   ),
+  handleChange: PropTypes.func.isRequired,
 }
 
 EqualLayoutForm.defaultProps = {

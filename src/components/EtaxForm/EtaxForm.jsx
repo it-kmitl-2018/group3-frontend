@@ -7,9 +7,19 @@ class EtaxForm extends React.Component {
     super(props)
     this.state = { ...addressFieldsState }
   }
+  handleChange = name => event => {
+    this.setState({
+      [name]: event.target.value,
+    })
+  }
 
   render() {
-    return <EqualLayoutForm fields={ addressFields } />
+    return (
+      <EqualLayoutForm
+        fields={ addressFields }
+        handleChange={ this.handleChange }
+      />
+    )
   }
 }
 
