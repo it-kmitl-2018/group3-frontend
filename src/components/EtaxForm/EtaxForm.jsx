@@ -13,10 +13,8 @@ import {
  * @extends {React.Component}
  */
 class EtaxForm extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { ...addressFieldsState }
-  }
+  state = { ...addressFieldsState }
+
   handleChange = name => event => {
     this.setState({
       [name]: event.target.value,
