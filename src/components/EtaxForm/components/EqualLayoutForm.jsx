@@ -10,10 +10,9 @@ import PropTypes from "prop-types"
 const EqualLayoutForm = props => (
   <div className="row col-12">
     {props.fields.map(field => (
-      <div className="col-4">
+      <div className="col-4" key={ field.id }>
         <TextField
           className="col-12"
-          key={ field.id }
           id={ field.id }
           label={ field.label }
           helperText={ field.helperText }
