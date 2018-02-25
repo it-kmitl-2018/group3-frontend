@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="row col-12"
+>
+  <div
+    className="col-4"
+  >
+    <div
+      aria-describedby="houseNo-helper-text"
+      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 col-12"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <label
+        className="MuiFormLabel-root-11 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+        data-shrink={false}
+        htmlFor="houseNo"
+      >
+        House No.
+        <span
+          className=""
+        >
+           *
+        </span>
+      </label>
+      <div
+        className="MuiInput-root-15 MuiInput-formControl-16 MuiInput-inkbar-17 MuiInput-underline-21"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          aria-required={true}
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-24"
+          defaultValue={undefined}
+          disabled={false}
+          id="houseNo"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={true}
+          rows={undefined}
+          type="text"
+          value={undefined}
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root-30"
+        id="houseNo-helper-text"
+      >
+        Your House Number
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-4"
+  >
+    <div
+      aria-describedby="villege-helper-text"
+      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 col-12"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <label
+        className="MuiFormLabel-root-11 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+        data-shrink={false}
+        htmlFor="villege"
+      >
+        Villege
+      </label>
+      <div
+        className="MuiInput-root-15 MuiInput-formControl-16 MuiInput-inkbar-17 MuiInput-underline-21"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          aria-required={false}
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-24"
+          defaultValue={undefined}
+          disabled={false}
+          id="villege"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={undefined}
+          rows={undefined}
+          type="text"
+          value={undefined}
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root-30"
+        id="villege-helper-text"
+      >
+        Your Villege Name
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-4"
+  >
+    <div
+      aria-describedby="postCode-helper-text"
+      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 col-12"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <label
+        className="MuiFormLabel-root-11 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+        data-shrink={false}
+        htmlFor="postCode"
+      >
+        Post Code
+        <span
+          className=""
+        >
+           *
+        </span>
+      </label>
+      <div
+        className="MuiInput-root-15 MuiInput-formControl-16 MuiInput-inkbar-17 MuiInput-underline-21"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          aria-required={true}
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-24"
+          defaultValue={undefined}
+          disabled={false}
+          id="postCode"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={true}
+          rows={undefined}
+          type="text"
+          value={undefined}
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root-30"
+        id="postCode-helper-text"
+      >
+        Your Post Code
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-4"
+  >
+    <div
+      aria-describedby="province-helper-text"
+      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 col-12"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <label
+        className="MuiFormLabel-root-11 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+        data-shrink={false}
+        htmlFor="province"
+      >
+        Province
+        <span
+          className=""
+        >
+           *
+        </span>
+      </label>
+      <div
+        className="MuiInput-root-15 MuiInput-formControl-16 MuiInput-inkbar-17 MuiInput-underline-21"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          aria-required={true}
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-24"
+          defaultValue={undefined}
+          disabled={false}
+          id="province"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={true}
+          rows={undefined}
+          type="text"
+          value={undefined}
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root-30"
+        id="province-helper-text"
+      >
+        Your Province
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-4"
+  >
+    <div
+      aria-describedby="district-helper-text"
+      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 col-12"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <label
+        className="MuiFormLabel-root-11 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+        data-shrink={false}
+        htmlFor="district"
+      >
+        District
+        <span
+          className=""
+        >
+           *
+        </span>
+      </label>
+      <div
+        className="MuiInput-root-15 MuiInput-formControl-16 MuiInput-inkbar-17 MuiInput-underline-21"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          aria-required={true}
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-24"
+          defaultValue={undefined}
+          disabled={false}
+          id="district"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={true}
+          rows={undefined}
+          type="text"
+          value={undefined}
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root-30"
+        id="district-helper-text"
+      >
+        Your District
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-4"
+  >
+    <div
+      aria-describedby="country-helper-text"
+      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 col-12"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <label
+        className="MuiFormLabel-root-11 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+        data-shrink={false}
+        htmlFor="country"
+      >
+        Country
+        <span
+          className=""
+        >
+           *
+        </span>
+      </label>
+      <div
+        className="MuiInput-root-15 MuiInput-formControl-16 MuiInput-inkbar-17 MuiInput-underline-21"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          aria-required={true}
+          autoComplete={undefined}
+          autoFocus={undefined}
+          className="MuiInput-input-24"
+          defaultValue={undefined}
+          disabled={false}
+          id="country"
+          name={undefined}
+          onChange={[Function]}
+          onKeyDown={undefined}
+          onKeyUp={undefined}
+          placeholder={undefined}
+          readOnly={undefined}
+          required={true}
+          rows={undefined}
+          type="text"
+          value={undefined}
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root-30"
+        id="country-helper-text"
+      >
+        Your Country Name
+      </p>
+    </div>
+  </div>
+</div>
+`;
