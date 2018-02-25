@@ -1,13 +1,16 @@
-import { React, Component } from "react"
+import React from "react"
 
-class Example extends Component {
+class Example extends React.Component {
   state = {}
+
+  cardStyle = {
+    width: "400px",
+  }
 
   render() {
     return (
       <div>
-        <div className="card">
-          <img className="card-img-top" alt="this is a example." />
+        <div className="card" style={ this.cardStyle }>
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
             <p className="card-text">
