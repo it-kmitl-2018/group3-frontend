@@ -25,8 +25,8 @@ class EtaxForm extends React.Component {
 
   submitForm = () => {
     Api.post("/address", this.state)
-    .then(response => console.log(response))
-    .catch(error => console.log(error))
+    .then(console.log)
+    .catch(console.log)
   }
 
   render() {
@@ -36,7 +36,7 @@ class EtaxForm extends React.Component {
           fields={ addressFields }
           handleChange={ this.handleChange }
         />
-        <Button onClick={this.submitForm} variant="raised" color="primary">
+        <Button onClick={ this.submitForm } variant="raised" color="primary">
           Submit
         </Button>
       </div>
