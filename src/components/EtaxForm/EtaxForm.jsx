@@ -24,6 +24,7 @@ class EtaxForm extends React.Component {
   render() {
     return (
       <EqualLayoutForm
+        name="Address Form"
         fields={ addressFields }
         handleChange={ this.handleChange }
       />
