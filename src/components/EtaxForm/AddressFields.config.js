@@ -84,13 +84,6 @@ const addressFields = [
     required: false,
   },
   {
-    id: "countryID",
-    label: "รหัสประเทศ",
-    helperText: "ex. TH",
-    margin: "normal",
-    required: false,
-  },
-  {
     id: "countrySubDivisionID",
     label: "รหัสย่อยประเทศ",
     helperText: "",
