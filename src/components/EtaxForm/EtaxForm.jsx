@@ -3,6 +3,7 @@ import Button from "material-ui/Button"
 import styled from "styled-components"
 import CountrySelector from "react-geoidentify-country-selector"
 import EqualLayoutForm from "./EqualLayoutForm"
+import ProviceDropdown from "../ProvinceDropdown/ProvinceDropdown"
 import Api from "../../services/api"
 import { addressFieldsState, addressFields } from "./AddressFields.config"
 
@@ -41,13 +42,13 @@ class EtaxForm extends React.Component {
   }
 
   render() {
-    const Country = ({ className, children }) => (
-      <div className={ className }>{children}</div>
-    )
+    const countrySelectorStyle = {
+      marginTop: "25px",
+    }
 
-    const StyledCountry = styled(Country)`
-      margin-top: 25px;
-    `
+    const provinceSelectorStyle = {
+      marginTop: "25px",
+    }
 
     return (
       <div>
@@ -56,15 +57,20 @@ class EtaxForm extends React.Component {
           fields={ addressFields }
           handleChange={ this.handleChange }
         />
-        <StyledCountry className="col-4">
-          <CountrySelector
-            defaultCountry="Georgia"
-            getSelectedCountry={ coutryObject =>
-              this.getSelectedCountry(coutryObject)
-            }
-          />
-          <div className="MuiFormHelperText-root-30">ex. Thailand</div>
-        </StyledCountry>
+        <div className="row container">
+          <div className="col-4" style={ provinceSelectorStyle }>
+            <ProviceDropdown />
+          </div>
+          <div className="col-4" style={ countrySelectorStyle }>
+            <CountrySelector
+              defaultCountry="Georgia"
+              getSelectedCountry={ coutryObject =>
+                this.getSelectedCountry(coutryObject)
+              }
+            />
+            <div className="MuiFormHelperText-root-30">ex. Thailand</div>
+          </div>
+        </div>
         <Button onClick={ this.submitForm } variant="raised" color="primary">
           Submit
         </Button>
