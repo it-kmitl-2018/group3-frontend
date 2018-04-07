@@ -1,5 +1,6 @@
 import React from "react"
 import Select from "material-ui/Select"
+import PropTypes from "prop-types"
 import { MenuItem } from "material-ui/Menu"
 import { InputLabel } from "material-ui/Input"
 import { FormControl, FormHelperText } from "material-ui/Form"
@@ -10,9 +11,10 @@ export default class ProvinceDropdown extends React.Component {
     province: "",
   }
 
-  handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value })
-    console.log(this.state.province)
+  handleProvinceChange = event => {
+    this.setState({ province: event.target.value }, () => {
+      this.props.onchange(this.state.province)
+    })
   }
 
   render() {
@@ -34,7 +36,7 @@ export default class ProvinceDropdown extends React.Component {
               id: "province",
             } }
             value={ this.state.province }
-            onChange={ this.handleChange }
+            onChange={ this.handleProvinceChange }
             label="จังหวัด"
             style={ select }
             className="col-12"
@@ -50,4 +52,8 @@ export default class ProvinceDropdown extends React.Component {
       </div>
     )
   }
+}
+
+ProvinceDropdown.propTypes = {
+  onchange: PropTypes.func.isRequired,
 }
