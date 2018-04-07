@@ -1,7 +1,5 @@
 import React from "react"
 import Button from "material-ui/Button"
-import styled from "styled-components"
-import CountrySelector from "react-geoidentify-country-selector"
 import EqualLayoutForm from "./EqualLayoutForm"
 import ProviceDropdown from "../ProvinceDropdown/ProvinceDropdown"
 import Api from "../../services/api"
@@ -17,18 +15,6 @@ import { addressFieldsState, addressFields } from "./AddressFields.config"
 class EtaxForm extends React.Component {
   state = { ...addressFieldsState }
 
-  getSelectedCountry(coutryObject) {
-    console.log(coutryObject)
-    /*
-        {
-            countryName: "Palau",
-            ISOALPHA2Code: "PW",
-            ISOALPHA3Code: "PLW",
-            ISONumericalCode: 585
-        }
-     */
-  }
-
   handleChange = name => event => {
     this.setState({
       [name]: event.target.value,
@@ -41,11 +27,12 @@ class EtaxForm extends React.Component {
       .catch()
   }
 
-  render() {
-    const countrySelectorStyle = {
-      marginTop: "25px",
-    }
+  handleProviceChange = val => {
+    console.log(val)
+    //TODO: send the value to backend api
+  }
 
+  render() {
     const provinceSelectorStyle = {
       marginTop: "25px",
     }
@@ -59,16 +46,7 @@ class EtaxForm extends React.Component {
         />
         <div className="row container">
           <div className="col-4" style={ provinceSelectorStyle }>
-            <ProviceDropdown />
-          </div>
-          <div className="col-4" style={ countrySelectorStyle }>
-            <CountrySelector
-              defaultCountry="Georgia"
-              getSelectedCountry={ coutryObject =>
-                this.getSelectedCountry(coutryObject)
-              }
-            />
-            <div className="MuiFormHelperText-root-30">ex. Thailand</div>
+            <ProviceDropdown onchange={ this.handleProviceChange } />
           </div>
         </div>
         <Button onClick={ this.submitForm } variant="raised" color="primary">

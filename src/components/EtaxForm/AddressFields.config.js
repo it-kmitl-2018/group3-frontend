@@ -83,6 +83,13 @@ const addressFields = [
     margin: "normal",
     required: false,
   },
+  {
+    id: "countryID",
+    label: "รหัสประเทศ",
+    helperText: "ex. TH",
+    margin: "normal",
+    required: false,
+  },
 ]
 
 /**
