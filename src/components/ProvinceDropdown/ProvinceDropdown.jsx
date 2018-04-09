@@ -11,24 +11,25 @@ export default class ProvinceDropdown extends React.Component {
     province: "",
   }
 
+  style = {
+    formControl: {
+      textAlign: "left",
+    },
+    select: {
+      padding: 0,
+    },
+  }
+
   handleProvinceChange = event => {
-    this.setState({ province: event.target.value }, () => {
-      this.props.onchange(this.state.province)
-    })
+    const province = event.target.value
+    this.setState({ province: province })
+    this.props.onChange(province)
   }
 
   render() {
-    const formControl = {
-      textAlign: "left",
-    }
-
-    const select = {
-      padding: 0,
-    }
-
     return (
       <div>
-        <FormControl className="col-12" style={ formControl }>
+        <FormControl className="col-12" style={ this.style.formControl }>
           <InputLabel htmlFor="province">จังหวัด</InputLabel>
           <Select
             inputProps={ {
@@ -38,7 +39,7 @@ export default class ProvinceDropdown extends React.Component {
             value={ this.state.province }
             onChange={ this.handleProvinceChange }
             label="จังหวัด"
-            style={ select }
+            style={ this.style.select }
             className="col-12"
           >
             {ProvinceDropdownData.map(province => (
@@ -55,5 +56,5 @@ export default class ProvinceDropdown extends React.Component {
 }
 
 ProvinceDropdown.propTypes = {
-  onchange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
