@@ -1,11 +1,9 @@
 import React from "react"
-import EqualLayoutForm from "./components/EqualLayoutForm"
-import Api from "../../services/api"
 import Button from "material-ui/Button"
-import {
-  addressFieldsState,
-  addressFields,
-} from "./configs/AddressFields.config"
+import EqualLayoutForm from "./EqualLayoutForm"
+import ProvinceDropdown from "../ProvinceDropdown/ProvinceDropdown"
+import Api from "../../services/api"
+import { addressFieldsState, addressFields } from "./AddressFields.config"
 
 /**
  * EtaxForm is a component that handle
@@ -17,6 +15,12 @@ import {
 class EtaxForm extends React.Component {
   state = { ...addressFieldsState }
 
+  style = {
+    provinceSelectorStyle: {
+      marginTop: "25px",
+    },
+  }
+
   handleChange = name => event => {
     this.setState({
       [name]: event.target.value,
@@ -24,9 +28,12 @@ class EtaxForm extends React.Component {
   }
 
   submitForm = () => {
-    Api.post("/address", this.state)
-    .then(console.log)
-    .catch(console.log)
+    Api.post("/address", this.state).catch(err => console.log(err))
+  }
+
+  handleProvinceChange = val => {
+    console.log(val)
+    //TODO: send the value to backend api
   }
 
   render() {
@@ -37,6 +44,11 @@ class EtaxForm extends React.Component {
           fields={ addressFields }
           handleChange={ this.handleChange }
         />
+        <div className="row container">
+          <div className="col-4" style={ this.style.provinceSelectorStyle }>
+            <ProvinceDropdown onChange={ this.handleProvinceChange } />
+          </div>
+        </div>
         <Button onClick={ this.submitForm } variant="raised" color="primary">
           Submit
         </Button>
