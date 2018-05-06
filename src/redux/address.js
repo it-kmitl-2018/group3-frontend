@@ -2,8 +2,8 @@ import { combineReducers } from "redux"
 import api from "../services/api"
 
 // Actions
-const SEND = "address/SEND"
-const RECEIVED = "address/RECEIVED"
+export const SEND = "address/SEND"
+export const RECEIVED = "address/RECEIVED"
 
 // Action creators
 export function sendAddress(address) {
@@ -13,7 +13,7 @@ export function sendAddress(address) {
   }
 }
 
-function receivedAddress(json) {
+export function receivedAddress(json) {
   return {
     type: RECEIVED,
     json,
@@ -25,8 +25,7 @@ function sendAddresss(address) {
     dispatch(sendAddress(address))
 
     return api.post("/address", address).then(response => {
-      console.log(response)
-      dispatch(receivedAddress(response))
+      dispatch(receivedAddress(response.data))
     })
   }
 }
@@ -40,27 +39,28 @@ export const sendAddresssIfNeeded = address => {
 }
 
 // Reducers
-function address(
+export function address(
   state = {
     isSending: false,
-    exportData: "",
+    exportData: {},
+    address: {},
   },
   action
 ) {
   switch (action.type) {
-    case SEND:
-      return {
-        ...state,
-        isSending: true,
-      }
-    case RECEIVED:
-      return {
-        ...state,
-        exportData: action.json,
-        isSending: false,
-      }
-    default:
-      return state
+  case SEND:
+    return {
+      ...state,
+      isSending: true,
+    }
+  case RECEIVED:
+    return {
+      ...state,
+      exportData: action.json,
+      isSending: false,
+    }
+  default:
+    return state
   }
 }
 
