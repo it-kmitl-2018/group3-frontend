@@ -1,8 +1,8 @@
 import React from "react"
 import Button from "material-ui/Button"
+import PropTypes from "prop-types"
 import EqualLayoutForm from "./EqualLayoutForm"
 import ProvinceDropdown from "../ProvinceDropdown/ProvinceDropdown"
-import Api from "../../services/api"
 import { addressFieldsState, addressFields } from "./AddressFields.config"
 
 /**
@@ -28,7 +28,7 @@ class EtaxForm extends React.Component {
   }
 
   submitForm = () => {
-    Api.post("/address", this.state).catch(err => console.log(err))
+    this.props.submitForm(this.state)
   }
 
   handleProvinceChange = val => {
@@ -55,6 +55,10 @@ class EtaxForm extends React.Component {
       </div>
     )
   }
+}
+
+EtaxForm.propTypes = {
+  submitForm: PropTypes.func.isRequired,
 }
 
 export default EtaxForm
