@@ -30,14 +30,8 @@ class Home extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  const isSending = state.isSending
-
-  return { isSending }
-}
-
 Home.propTypes = {
   dispatch: PropTypes.func.isRequired,
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect()(Home)
