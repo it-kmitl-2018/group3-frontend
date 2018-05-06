@@ -17,6 +17,9 @@
     "react-scripts": "1.1.0",
     "react-test-renderer": "^16.2.0",
     "reactstrap": "^5.0.0-beta",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
     "styled-components": "^3.1.6"
   },
   "scripts": {
@@ -33,7 +36,11 @@
     "@storybook/addons": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "babel-core": "^6.26.0",
-    "eslint-config-airbnb": "^16.1.0"
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
   },
   "jest": {
     "collectCoverageFrom": [
