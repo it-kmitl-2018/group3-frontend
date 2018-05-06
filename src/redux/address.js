@@ -20,20 +20,14 @@ export function receivedAddress(json) {
   }
 }
 
-function sendAddresss(address) {
-  return dispatch => {
-    dispatch(sendAddress(address))
-
-    return api.post("/address", address).then(response => {
-      dispatch(receivedAddress(response.data))
-    })
-  }
-}
-
 export const sendAddresssIfNeeded = address => {
   return (dispatch, getState) => {
     if (!getState().isSending) {
-      return dispatch(sendAddresss(address))
+      dispatch(sendAddress(address))
+
+      return api.post("/address", address).then(response => {
+        dispatch(receivedAddress(response.data))
+      })
     }
   }
 }
