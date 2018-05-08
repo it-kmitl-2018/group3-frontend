@@ -53,7 +53,7 @@ export default function addressReducer(
   case RECEIVED:
     return {
       ...state,
-      exportData: action.json,
+      exportData: action.payload.json,
       isSending: false,
     }
   default:

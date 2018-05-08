@@ -13,7 +13,9 @@ describe("address reducer", () => {
   it("should return the sending state", () => {
     expect(
       addressReducer(undefined, {
-        address: addressMock,
+        payload: {
+          address: addressMock,
+        },
         type: SEND,
       })
     ).toEqual({
@@ -26,7 +28,9 @@ describe("address reducer", () => {
   it("should return the received state", () => {
     expect(
       addressReducer(undefined, {
-        json: responseMock,
+        payload: {
+          json: responseMock,
+        },
         type: RECEIVED,
       })
     ).toEqual({
