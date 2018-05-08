@@ -9,10 +9,11 @@
   "extends": ["airbnb", "eslint:recommended"],
   "parser": "babel-eslint",
   "rules": {
-    "indent": 2,
+    "indent": ["error", 2],
     "prefer-const": 1,
     "react/jsx-curly-spacing": [2, "always"],
     "react/jsx-filename-extension": 0,
+    "react/forbid-prop-types": ["never"],
     "semi": ["error", "never"],
     "comma-dangle": ["error", "always-multiline"],
     "no-console": "off"
