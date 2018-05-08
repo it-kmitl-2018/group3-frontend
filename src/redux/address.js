@@ -1,4 +1,3 @@
-import { combineReducers } from "redux"
 import api from "../services/api"
 
 // Actions
@@ -9,14 +8,18 @@ export const RECEIVED = "address/RECEIVED"
 export function sendAddress(address) {
   return {
     type: SEND,
-    address,
+    payload: {
+      address,
+    },
   }
 }
 
 export function receivedAddress(json) {
   return {
     type: RECEIVED,
-    json,
+    payload: {
+      json,
+    },
   }
 }
 
@@ -33,7 +36,7 @@ export const sendAddresssIfNeeded = address => {
 }
 
 // Reducers
-export function address(
+export default function addressReducer(
   state = {
     isSending: false,
     exportData: {},
@@ -57,6 +60,3 @@ export function address(
     return state
   }
 }
-
-const addressReducer = combineReducers({ address })
-export default addressReducer

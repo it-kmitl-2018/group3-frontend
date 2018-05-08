@@ -1,9 +1,9 @@
-import { address, SEND, RECEIVED } from "../../../redux/address"
+import addressReducer, { SEND, RECEIVED } from "../../../redux/address"
 import { addressMock, responseMock } from "./mockValue"
 
 describe("address reducer", () => {
   it("should return the initial state", () => {
-    expect(address(undefined, {})).toEqual({
+    expect(addressReducer(undefined, {})).toEqual({
       address: {},
       exportData: {},
       isSending: false,
@@ -12,7 +12,7 @@ describe("address reducer", () => {
 
   it("should return the sending state", () => {
     expect(
-      address(undefined, {
+      addressReducer(undefined, {
         address: addressMock,
         type: SEND,
       })
@@ -25,7 +25,7 @@ describe("address reducer", () => {
 
   it("should return the received state", () => {
     expect(
-      address(undefined, {
+      addressReducer(undefined, {
         json: responseMock,
         type: RECEIVED,
       })

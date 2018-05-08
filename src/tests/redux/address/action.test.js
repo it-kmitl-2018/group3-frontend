@@ -10,7 +10,9 @@ describe("address action creator", () => {
   it("should create action to send", () => {
     const expectedAction = {
       type: SEND,
-      address: addressMock,
+      payload: {
+        address: addressMock,
+      },
     }
 
     expect(sendAddress(addressMock)).toEqual(expectedAction)
@@ -19,7 +21,9 @@ describe("address action creator", () => {
   it("should create action to receive", () => {
     const expectedAction = {
       type: RECEIVED,
-      json: responseMock,
+      payload: {
+        json: responseMock,
+      },
     }
 
     expect(receivedAddress(responseMock)).toEqual(expectedAction)
